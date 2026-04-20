@@ -42,7 +42,7 @@ echo -e "\\ndefine Device/bendian_bd-one
 \$(call Device/Legacy/rk3568,\$(1))
   DEVICE_VENDOR := BENDIAN
   DEVICE_MODEL := BD ONE
-  DEVICE_DTS := rk3568/rk3568-bendian-bd-one
+  DEVICE_DTS := rk3568/rk3568-bendian-one
   DEVICE_PACKAGES += kmod-nvme kmod-ata-ahci-dwc kmod-hwmon-pwmfan kmod-thermal kmod-r8169
 endef
 TARGET_DEVICES += bendian_bd-one" >> target/linux/rockchip/image/legacy.mk

@@ -228,7 +228,7 @@
 		compatible = "regulator-fixed";
 		regulator-name = "vcc3v3_pi6c_03";
 		enable-active-high;
-		gpio = <&gpio0 RK_PB0 GPIO_ACTIVE_HIGH>;
+		gpio = <&gpio0 RK_PC0 GPIO_ACTIVE_HIGH>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&ssd_pwr_en>;
 		regulator-min-microvolt = <3300000>;
@@ -394,7 +394,7 @@
 /* ====================================================================== */
 /* PCIe 2.0 x1 — NVMe SSD */
 &pcie2x1 {
-	reset-gpios = <&gpio3 RK_PB1 GPIO_ACTIVE_HIGH>;
+	reset-gpios = <&gpio3 RK_PC1 GPIO_ACTIVE_HIGH>;
 	vpcie3v3-supply = <&vcc3v3_sys>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&pcie20_reset_pin>;
@@ -407,7 +407,7 @@
 };
 
 &pcie3x2 {
-	reset-gpios = <&gpio0 RK_PB6 GPIO_ACTIVE_HIGH>;
+	reset-gpios = <&gpio0 RK_PC6 GPIO_ACTIVE_HIGH>;
 	vpcie3v3-supply = <&vcc3v3_pcie>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&pcie30_reset_pin>;
@@ -516,7 +516,7 @@
 		     &gmac1m0_rx_bus2
 		     &gmac1m0_rgmii_clk
 		     &gmac1m0_rgmii_bus>;
-	snps,reset-gpio = <&gpio1 RK_PB6 GPIO_ACTIVE_LOW>;
+	snps,reset-gpio = <&gpio1 RK_PB1 GPIO_ACTIVE_LOW>;
 	snps,reset-active-low;
 	snps,reset-delays-us = <0 20000 100000>;
 	tx_delay = <0x30>;
@@ -698,17 +698,17 @@
 
 	pcie20 {
 		pcie20_reset_pin: pcie20-reset-pin {
-			rockchip,pins = <3 RK_PB1 RK_FUNC_GPIO &pcfg_pull_down>;
+			rockchip,pins = <3 RK_PC1 RK_FUNC_GPIO &pcfg_pull_down>;
 		};
 	};
 
 	pcie30 {
 		pcie30_reset_pin: pcie30-reset-pin {
-			rockchip,pins = <0 RK_PB6 RK_FUNC_GPIO &pcfg_pull_down>;
+			rockchip,pins = <0 RK_PC6 RK_FUNC_GPIO &pcfg_pull_down>;
 		};
 
 		ssd_pwr_en: ssd-pwr-en {
-			rockchip,pins = <0 RK_PB0 RK_FUNC_GPIO &pcfg_pull_down>;
+			rockchip,pins = <0 RK_PC0 RK_FUNC_GPIO &pcfg_pull_down>;
 		};
 	};
 

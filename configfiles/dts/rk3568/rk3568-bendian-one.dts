@@ -69,7 +69,7 @@
 
 		led-1 {
 			label = "green:status";
-			gpios = <&gpio4 RK_PA1 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio4 RK_PB1 GPIO_ACTIVE_LOW>;
 			color = <LED_COLOR_ID_GREEN>;
 			function = LED_FUNCTION_STATUS;
 			linux,default-trigger = "heartbeat";
@@ -692,7 +692,7 @@
 		};
 
 		status_led_pin: status-led-pin {
-			rockchip,pins = <4 RK_PA1 RK_FUNC_GPIO &pcfg_pull_none>;
+			rockchip,pins = <4 RK_PB1 RK_FUNC_GPIO &pcfg_pull_none>;
 		};
 	};
 

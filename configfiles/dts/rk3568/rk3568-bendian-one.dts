@@ -422,7 +422,7 @@
  * 4× LAN ports (lan1~lan4) + 1× CPU port (port7, fixed 1Gbps)
  */
 &gmac0 {
-	assigned-clocks = <&cru SCLK_GMAC0_RX_TX>, <&cru CLK_MAC0_OUT>;
+	assigned-clocks = <&cru SCLK_GMAC0_RX_TX>, <&cru SCLK_GMAC0>;
 	assigned-clock-parents = <&cru SCLK_GMAC0_RGMII_SPEED>, <&cru CLK_MAC0_2TOP>;
 	assigned-clock-rates = <0>, <125000000>;
 	clock_in_out = "output";
@@ -503,7 +503,7 @@
  * GMAC1 — direct RTL8211 PHY (1× WAN)
  */
 &gmac1 {
-	assigned-clocks = <&cru SCLK_GMAC1_RX_TX>, <&cru CLK_MAC1_OUT>;
+	assigned-clocks = <&cru SCLK_GMAC1_RX_TX>, <&cru SCLK_GMAC1>;
 	assigned-clock-parents = <&cru SCLK_GMAC1_RGMII_SPEED>;
 	assigned-clock-rates = <0>, <125000000>;
 	clock_in_out = "output";

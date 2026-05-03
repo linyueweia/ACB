@@ -103,7 +103,7 @@ jobs:
     - name: 缓存构建动作
       uses: xiaomeng9597/cachewrtbuild@main
       with:
-        ccache: 'true'
+        ccache: false
         mixkey: ${{ matrix.os }}-${{ matrix.ARCHITECTURE }}-${{ matrix.REPO_BRANCH }}
         prefix: ${{ github.workspace }}/openwrt
 
